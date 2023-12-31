@@ -1,3 +1,4 @@
 export function getName() : string {
-    return "World!!!";
+    const name = import.meta.env.VITE_MESSAGE;
+    return name;
 }
