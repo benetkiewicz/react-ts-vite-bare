@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "target": "ES2021",
+        "useDefineForClassFields": true,
+        "lib": ["ES2021", "DOM", "DOM.Iterable"],
+        "allowJs": true,
+        "module": "ESNext",
+        "skipLibCheck": true,
+        "moduleResolution": "node",
+        "jsx": "react-jsx",
+        "noEmit": true,
+
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "allowSyntheticDefaultImports": true
+    },
+    "exclude": ["node_modules", "dist"],
+    "include": ["src"]
+}
