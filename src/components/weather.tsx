@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
+import { httpClient } from "../httpClient";
 
 function Weather() {
     const [temperature, setTemperature] = useState('');
 
     useEffect(() => {
         (async function () {
-            const { temperatura } = await(await fetch('https://danepubliczne.imgw.pl/api/data/synop/id/12250')).json();
-            setTemperature(temperatura);
+            const { temperatura }: { temperatura: number } = await httpClient.get('id/12250').json();
+            setTemperature(temperatura.toString());
         })();
     });
 
